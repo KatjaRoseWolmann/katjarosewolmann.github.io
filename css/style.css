@@ -2252,4 +2252,179 @@ body.firefox .about-section {
             width: 100% !important;
         }
     }
+}
+
+/* Improved mobile responsiveness fix */
+@media screen and (max-width: 768px) {
+    /* Fix for overlapping values cards */
+    .values-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .values-row {
+        width: 100%;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .values-column {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+        margin-bottom: 0;
+    }
+    
+    .value-card {
+        width: 100%;
+        margin-bottom: 20px;
+        height: auto;
+    }
+    
+    /* Fix for "My Books" section */
+    .value-card-hero {
+        margin-bottom: 40px;
+        padding: 30px 20px;
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Fix for overlapping emotion and upcoming book text */
+    .value-title, 
+    .value-card h3,
+    .value-card-hero h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        z-index: 2;
+        position: relative;
+    }
+    
+    .value-description,
+    .value-card p,
+    .value-card-hero p {
+        z-index: 2;
+        position: relative;
+        font-size: 1rem;
+    }
+    
+    /* Prevent text from getting cut off */
+    .hero {
+        min-height: auto;
+        height: auto;
+        padding-bottom: 50px;
+    }
+    
+    /* Adjust spacing between hero values cards */
+    .hero-values {
+        gap: 40px;
+        margin-top: 40px;
+        flex-direction: column;
+    }
+    
+    /* Fix for upcoming book section */
+    .upcoming-book {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+    
+    .upcoming-cover {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto 20px;
+    }
+    
+    .upcoming-info h3 {
+        font-size: 1.8rem;
+        margin-top: 0;
+    }
+    
+    .book-tagline {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+    
+    /* Ensure proper z-index stacking */
+    section {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+/* Additional fixes for smaller screens */
+@media screen and (max-width: 480px) {
+    .hero-title {
+        font-size: 2.2rem;
+        margin: 15px 0 20px;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    
+    .value-card-hero {
+        padding: 25px 15px;
+    }
+    
+    .value-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 15px;
+    }
+    
+    .value-icon i {
+        font-size: 25px;
+    }
+    
+    .value-title, 
+    .value-card-hero h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Additional mobile navigation fixes */
+@media screen and (max-width: 768px) {
+    /* Fix navigation display */
+    .nav-list {
+        background: rgba(10, 10, 26, 0.95);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        padding: 15px 0;
+        border-radius: 10px;
+    }
+    
+    .nav-list a {
+        padding: 10px 15px;
+        display: block;
+    }
+    
+    /* Make section headings more readable */
+    section h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+        padding: 0 10px 15px;
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
+    
+    /* Make sure overlapping text issues are resolved */
+    .upcoming-book {
+        position: relative;
+        z-index: 2;
+    }
+    
+    /* Fix My Books heading */
+    section h2.books-heading {
+        position: relative;
+        z-index: 3;
+        margin-bottom: 30px;
+    }
+    
+    /* Add space between sections */
+    section {
+        padding: 60px 0;
+        margin-bottom: 20px;
+    }
 } 
